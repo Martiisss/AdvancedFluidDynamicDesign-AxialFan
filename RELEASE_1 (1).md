@@ -2,7 +2,7 @@
 
 **Advanced Fluid Dynamic Design | Noctua NF-A12x25 PWM**
 
-This release establishes the reference fan specifications, preliminary geometry, material selection and mean-line aerodynamic analysis. The calculations are documented in [D1](D1_Release1.ipynb) and [D2](D2_Release1.ipynb). Radial analysis and final blade design are reserved for Release 2.
+This release establishes the reference fan specifications, preliminary geometry, material selection and mean-line aerodynamic analysis. Radial analysis and final blade design are reserved for Release 2.
 
 ## 1. Specification and dimensionless parameters
 
@@ -23,7 +23,7 @@ The selected fan is a 120 mm axial fan for electronic cooling, with a nine-blade
 | Air density, $\rho$ | 1.20 kg/m³ | Assumed |
 | Dynamic viscosity, $\mu$ | 1.81 × 10⁻⁵ Pa·s | Assumed |
 
-The operating point is selected from matched pressure and flow data at approximately 2,000 rpm [1,2]. It is not claimed to be the best-efficiency point. Maximum flow and maximum static pressure occur at different operating conditions.
+The operating point is selected from matched pressure and flow data at approximately 2,000 rpm. It is not claimed to be the best-efficiency point. Maximum flow and maximum static pressure occur at different operating conditions.
 
 | Flow (m³/h) | Static pressure (mmH₂O) |
 |---:|---:|
@@ -37,7 +37,7 @@ For the initial lossless Euler calculation, the measured-type static pressure sp
 
 ### 1.2 Dimensionless parameters (D1)
 
-The definitions follow the course notebook [3], using the assumed rotor diameter in Section 2 and angular velocity $\Omega=2\pi N/60=209.440$ rad/s.
+The definitions follow the course notebooks, using the assumed rotor diameter in Section 2 and angular velocity $\Omega=2\pi N/60=209.440$ rad/s.
 
 | Parameter | Definition | Result |
 |---|---|---:|
@@ -67,7 +67,7 @@ The Cordier diagram in D1 locates the provisional point at $(D_s,\Omega_s)=(1.90
 | Motor supports | Struts connecting central motor housing to outer frame | Qualitative; count and dimensions pending |
 | Anti-vibration pads | Located at frame corners | Manufacturer |
 
-The rotor has twisted and swept blades; the chord varies along the span. The apparent frontal width is not necessarily the true section chord. Actual radial chord, thickness, twist, sweep and hub depth require measurements or a suitable geometric reference. The manufacturer CAD download [5] can support dimensional inspection, subject to its stated limitations.
+The rotor has twisted and swept blades; the chord varies along the span. The apparent frontal width is not necessarily the true section chord. Actual radial chord, thickness, twist, sweep and hub depth require measurements or a suitable geometric reference. The manufacturer CAD download can support dimensional inspection, subject to its stated limitations.
 
 The assumed annular flow geometry gives:
 
@@ -79,7 +79,7 @@ The hub-to-tip ratio is 0.439. The preliminary mean-section chord and blade angl
 
 ## 3. Materials and characteristics. Justification
 
-The following material descriptions are based on the manufacturer's specifications [1,4]. The justification is an engineering interpretation of their function; numerical mechanical properties are not assumed without grade-specific data.
+The following material descriptions are based on the manufacturer's specifications. The justification is an engineering interpretation of their function; numerical mechanical properties are not assumed without grade-specific data.
 
 | Component | Material / technology | Engineering justification |
 |---|---|---|
@@ -116,7 +116,7 @@ The relative velocity ratio is $w_2/w_1=0.8581$, above the conventional De Halle
 
 ### 4.2 Cascade geometry and diffusion factor
 
-For the mean-section cascade, $s=30.726$ mm, $l$ is the chord, and $\sigma=l/s$ is solidity. The D2 model uses the Lieblein diffusion factor and a drag coefficient $C_D=0.02$ [3,6]:
+For the mean-section cascade, $s=30.726$ mm, $l$ is the chord, and $\sigma=l/s$ is solidity. The D2 model uses the Lieblein diffusion factor and a drag coefficient $C_D=0.02$:
 
 $$DF=1-\frac{\cos\beta_1}{\cos\beta_2}+\frac{s}{2l}\cos\beta_1(\tan\beta_1-\tan\beta_2)$$
 
@@ -167,7 +167,7 @@ The sensitivity factors are hypothetical, not measured efficiencies. The calcula
 
 Release 1 establishes the operating point, dimensionless parameters, preliminary component geometry, material rationale and mean-section cascade estimates. Remaining geometry measurements should be recorded when available, particularly rotor and hub diameters, blade dimensions and motor supports. The pressure assumption must be reviewed before finalising the rotor design.
 
-Release 2 will address radial analysis, mean-line corrections, blade and rotor design, and expected overall performance. No definitive radial loading or final CAD geometry is selected in this release.
+Release 2 will address radial analysis, mean-line corrections, blade and rotor design, and expected overall performance. No definitive radial loading or final CAD geometry is selected in this second release.
 
 ## References
 
